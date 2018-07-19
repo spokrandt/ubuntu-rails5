@@ -5,8 +5,8 @@ ENV BUILD_PACKAGES="ruby-dev" \
     RAILS_VERSION="5.2.0"
  
 RUN \
-  apt-get update  && \
-  apt-get install $BUILD_PACKAGES $RUBY_PACKAGES $DEV_PACKAGES && \
+  apt-get -y update  && \
+  apt-get -y install $BUILD_PACKAGES $RUBY_PACKAGES $DEV_PACKAGES && \
   gem install -N bundler --pre
  
 RUN \
