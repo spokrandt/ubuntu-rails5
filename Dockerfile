@@ -5,6 +5,7 @@ ENV BUILD_PACKAGES="curl-dev ruby-dev build-base" \
     RAILS_VERSION="5.2.0"
  
 RUN \
+  apt-get update \
   apt-get install $BUILD_PACKAGES $RUBY_PACKAGES $DEV_PACKAGES && \
   gem install -N bundler --pre
  
