@@ -1,11 +1,11 @@
 FROM ubuntu:latest
-ENV BUILD_PACKAGES="curl-dev ruby-dev build-base" \
-    DEV_PACKAGES="zlib-dev libxml2-dev libxslt-dev tzdata yaml-dev sqlite-dev postgresql-dev mysql-dev libxml2-dev" \
-    RUBY_PACKAGES="ruby ruby-io-console ruby-json yaml nodejs" \
+ENV BUILD_PACKAGES="curl-dev ruby-dev" \
+    DEV_PACKAGES="zlib-dev libxml2-dev libxslt-dev tzdata libyaml-dev libsqlite3-dev mysql-client libmysqlclient-dev libxml2-dev" \
+    RUBY_PACKAGES="ruby  ruby-json  nodejs" \
     RAILS_VERSION="5.2.0"
  
 RUN \
-  apt-get update && \
+  apt-get update \
   apt-get install $BUILD_PACKAGES $RUBY_PACKAGES $DEV_PACKAGES && \
   gem install -N bundler --pre
  
@@ -27,5 +27,4 @@ RUN \
   rm -rf /usr/lib/lib/ruby/gems/*/cache/* && \
   rm -rf ~/.gem \
   mkdir /app
-
 
