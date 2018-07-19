@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 ENV BUILD_PACKAGES="ruby-dev" \
-    DEV_PACKAGES="libxml2-dev libxslt-dev tzdata libyaml-dev libsqlite3-dev mysql-client libmysqlclient-dev libxml2-dev" \
+    DEV_PACKAGES="libxml2-dev libxslt-dev libyaml-dev libsqlite3-dev mysql-client libmysqlclient-dev libxml2-dev" \
     RUBY_PACKAGES="ruby  ruby-json  nodejs" \
     RAILS_VERSION="5.2.0"
  
